@@ -1,3 +1,4 @@
+import 'package:diajar_flutter/api_method/post_method_stefl.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -95,6 +96,15 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ApiMethod()));
+                },
+                child: Text('Api Method')),
+            SizedBox(height: 24),
             const Text(
               'You have pushed the button this many times:',
             ),
