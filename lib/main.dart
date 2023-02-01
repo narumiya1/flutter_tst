@@ -1,7 +1,6 @@
-import 'package:diajar_flutter/api_method/post_method_stefl.dart';
+// import 'package:diajar_flutter/api_method/post/stateful/post_method_stefl.dart';
+import 'package:diajar_flutter/api_method/provider/post_method_provider.dart';
 import 'package:flutter/material.dart';
-
-import 'api_method/provider/post_method_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -105,7 +104,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       MaterialPageRoute(
                           builder: (context) => const ApiMethodProvider()));
                 },
-                child: Text('Api Method')),
+                child: Text('Post Api Method')),
+            SizedBox(height: 24),
+             ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ApiMethodProvider()));
+                },
+                child: Text('Get Api Method')),
             SizedBox(height: 24),
             const Text(
               'You have pushed the button this many times:',
