@@ -1,6 +1,8 @@
 import 'package:diajar_flutter/api_method/post/stateful/post_method_stefl.dart';
 import 'package:flutter/material.dart';
 
+import 'api_method/provider/post_method_provider.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -101,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ApiMethod()));
+                          builder: (context) => const ApiMethodProvider()));
                 },
                 child: Text('Api Method')),
             SizedBox(height: 24),
