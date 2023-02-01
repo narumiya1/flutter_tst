@@ -1,5 +1,4 @@
-// import 'package:diajar_flutter/api_method/post/stateful/post_method_stefl.dart';
-import 'package:diajar_flutter/api_method/provider/post_method_provider.dart';
+import 'package:diajar_flutter/api_method/post_method_stefl.dart';
 import 'package:flutter/material.dart';
 
 void main() {
