@@ -10,10 +10,10 @@ class ApiMethodProvider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+   return MaterialApp(
       home: ChangeNotifierProvider(
         create: (context) => HttpProvider(),
-        child: HomeProvider(),
+        child: const HomeProvider(),
       ),
     );
   }

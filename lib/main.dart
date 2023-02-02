@@ -1,10 +1,23 @@
-import 'package:diajar_flutter/api_method/post_method_stefl.dart';
+// import 'package:diajar_flutter/api_method/post_method_stefl.dart';
+import 'package:diajar_flutter/api_method/get_method/provider/http_get_provider.dart';
+import 'package:diajar_flutter/api_method/get_method/provider/ui_get_provider.dart';
+import 'package:diajar_flutter/api_method/post/provider/api_method_provider.dart';
+import 'package:diajar_flutter/api_method/post/provider/post_method_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import 'api_method/provider/post_method_provider.dart';
+import 'api_method/get_method/provider/page_provider_get.dart';
+import 'api_method/get_method/stateful/httpget_state.dart';
+import 'api_method/get_method/stateful/page_stateful_get.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => HttpGetProvider()),
+      ChangeNotifierProvider(create: (_) => HttpProvider())
+    ],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -105,7 +118,31 @@ class _MyHomePageState extends State<MyHomePage> {
                       MaterialPageRoute(
                           builder: (context) => const ApiMethodProvider()));
                 },
-                child: Text('Api Method')),
+                child: Text('Post Api Method')),
+            SizedBox(height: 24),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => HomeStatefulGet()));
+                  },
+                  child: Text('State Get Api Method'),
+                ),
+                 ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => GetMethodProvider()));
+                  },
+                  child: Text('Provider Get Api Method'),
+                ),
+              ],
+            ),
             SizedBox(height: 24),
             const Text(
               'You have pushed the button this many times:',
