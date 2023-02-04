@@ -1,8 +1,10 @@
-import 'package:diajar_flutter/api_method/provider/api_method_provider.dart';
+import 'package:diajar_flutter/api_method/post/provider/api_method_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class HomeProvider extends StatelessWidget {
+  const HomeProvider({super.key});
+
   @override
   Widget build(BuildContext context) {
     final dataProvider = Provider.of<HttpProvider>(context, listen: false);

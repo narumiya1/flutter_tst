@@ -3,6 +3,8 @@ import 'package:diajar_flutter/api_method/get_method/provider/http_get_provider.
 import 'package:diajar_flutter/api_method/get_method/provider/ui_get_provider.dart';
 import 'package:diajar_flutter/api_method/post/provider/api_method_provider.dart';
 import 'package:diajar_flutter/api_method/post/provider/post_method_provider.dart';
+import 'package:diajar_flutter/api_method/post/state/form_post.dart';
+import 'package:diajar_flutter/ui/ui_food.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -111,14 +113,31 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ApiMethodProvider()));
-                },
-                child: Text('Post Api Method')),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ApiMethodProvider()));
+                  },
+                  child: Text('Post Api Method'),
+                ),
+                SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FormPosts()));
+                  },
+                  child: Text('Post Api Method Form'),
+                ),
+              ],
+            ),
             SizedBox(height: 24),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -132,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   child: Text('State Get Api Method'),
                 ),
-                 ElevatedButton(
+                ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -143,6 +162,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
+            SizedBox(height: 24),
+            ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FoodApp()));
+                  },
+                  child: Text('UI FOOD Widget Basic'),
+                ),
             SizedBox(height: 24),
             const Text(
               'You have pushed the button this many times:',
