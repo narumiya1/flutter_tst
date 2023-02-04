@@ -20,11 +20,12 @@ class ItemCard extends StatelessWidget {
                 height: 160.0,
                 width: 300.0,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                        colors: [Colors.black.withOpacity(0.1), Colors.black],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter)),
+                  borderRadius: BorderRadius.circular(20),
+                  gradient: LinearGradient(
+                      colors: [Colors.black.withOpacity(0.1), Colors.black],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
