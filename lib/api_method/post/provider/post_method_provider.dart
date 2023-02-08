@@ -13,7 +13,7 @@ class ApiMethodProvider extends StatelessWidget {
    return MaterialApp(
       home: ChangeNotifierProvider(
         create: (context) => HttpProvider(),
-        child: const HomeProvider(),
+        child:  HomeProvider(),
       ),
     );
   }

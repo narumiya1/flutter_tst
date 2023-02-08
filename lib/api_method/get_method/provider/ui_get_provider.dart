@@ -5,14 +5,13 @@ import 'package:provider/provider.dart';
 import 'http_get_provider.dart';
 
 class GetMethodProvider extends StatelessWidget {
-  const GetMethodProvider({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: ChangeNotifierProvider(
         create: (context) => HttpGetProvider(),
-        child: const HomeGetProvider(),
+        child:  HomeGetProvider(),
       ),
     );
   }
