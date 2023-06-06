@@ -138,16 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   child: Text('Post Api Method Form'),
                 ),
-                   SizedBox(height: 24),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>  GetXTemplate()));
-                  },
-                  child: Text('GetX Template'),
-                ),
+                 
               ],
             ),
             SizedBox(height: 24),
@@ -184,7 +175,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   child: Text('UI FOOD Widget Basic'),
                 ),
-            SizedBox(height: 24),
+             SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>  GetXTemplate()));
+                  },
+                  child: Text('GetX Template'),
+                ),
+              SizedBox(height: 24),
             const Text(
               'You have pushed the button this many times:',
             ),
