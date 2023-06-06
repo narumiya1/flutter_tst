@@ -4,6 +4,8 @@ import 'package:diajar_flutter/api_method/get_method/provider/ui_get_provider.da
 import 'package:diajar_flutter/api_method/post/provider/api_method_provider.dart';
 import 'package:diajar_flutter/api_method/post/provider/post_method_provider.dart';
 import 'package:diajar_flutter/api_method/post/state/form_post.dart';
+import 'package:diajar_flutter/getx/getxTemplate.dart';
+import 'package:diajar_flutter/ui/test_api_assets.dart';
 import 'package:diajar_flutter/ui/ui_food.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -136,6 +138,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   child: Text('Post Api Method Form'),
                 ),
+                   SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>  GetXTemplate()));
+                  },
+                  child: Text('GetX Template'),
+                ),
               ],
             ),
             SizedBox(height: 24),
@@ -168,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const FoodApp()));
+                            builder: (context) =>  MyHomePageAssetTest()));
                   },
                   child: Text('UI FOOD Widget Basic'),
                 ),
